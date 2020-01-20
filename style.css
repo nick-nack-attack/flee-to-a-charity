@@ -1,0 +1,46 @@
+* {
+    box-sizing: border-box;
+}
+
+/* ELEMENTS ELEMENTS ELEMENTS */
+
+body {
+    text-align: center;
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+    padding-left: 40px;
+    padding-right: 40px;
+}
+
+input {
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+
+/* ID ID ID ID ID */
+
+#results-screen {
+    display: none;
+}
+
+#main-inputs {
+    position: fixed;
+    bottom: 20px;
+   left: 25%;
+   right: 25%;
+}
+
+#js-error-message {
+    color: red;
+    display: none;
+}
+
+/* CLASS CLASS CLASS */
+
+.card {
+    border: 1px solid white;
+    border-radius: 5px;
+    padding: 20px;
+}
