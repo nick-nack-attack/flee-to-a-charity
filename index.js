@@ -49,7 +49,7 @@ function getFarAwayZipcode(userZipcode) {
     console.log(` getFarAwayZipcode() is running ... `);
     const zipApi = 'js-8gx2Xw2m3hVqtsxYoFsC1xJyRjtPSmlMeTuiZSIfTtuYCx6mEKsf7r9TgMVqP9lP';
     const farZipUrl = `https://www.zipcodeapi.com/rest/${zipApi}/radius.json/${userZipcode}/10000/km?minimal`;
-    fetch(farZipUrl)
+    return fetch(farZipUrl)
     .then(response => {
         if (response.ok) {
             return response.json();
@@ -91,7 +91,6 @@ function getCharity(userSubject, userZipcode) {
                 $('#js-error-message').removeClass('hidden').text('Something went wrong: ' + error.message)
             });
         })
-
 }
 
 function watchForm() {
