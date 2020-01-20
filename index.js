@@ -72,6 +72,10 @@ if (!xhr) {
     throw new Error('CORS not supported');
 }
 
+function getTitle(text) {
+    return text.match('<title>(.*)?</title>')
+}
+
 function getCharity(userSubject) {
     console.log(` getCharity(${userSubject}) is running ... `);
     const charityApiKey = '42beb0038b32282e5146064515efe2db';
