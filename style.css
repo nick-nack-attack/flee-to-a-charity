@@ -44,3 +44,18 @@ input {
     border-radius: 5px;
     padding: 20px;
 }
+
+a, a:visited, a:link {
+    color: white;
+    border: white 1px solid;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: white;
+    color: black;
+    cursor: pointer;
+}
+
