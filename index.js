@@ -107,5 +107,3 @@ function runPage() {
     initializePage();
     watchForm();
 }
-
-runPage();
