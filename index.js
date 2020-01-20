@@ -30,6 +30,8 @@ function formatQueryParams(params) {
     return queryItems.join('&')
 }
 
+/*
+
 function getLatLong(responseJson) {
     return responseJson.lat + responseJson.lng;
 }
@@ -67,14 +69,16 @@ function createCORSRequest(method, url) {
     return xhr;
 }
 
-let xhr = createCORSRequest('GET', url);
-if (!xhr) {
-    throw new Error('CORS not supported');
-}
+// let xhr = createCORSRequest('GET', url);
+// if (!xhr) {
+//    throw new Error('CORS not supported');
+// }
 
 function getTitle(text) {
     return text.match('<title>(.*)?</title>')
 }
+
+*/
 
 function getCharity(userSubject) {
     console.log(` getCharity(${userSubject}) is running ... `);
@@ -91,7 +95,7 @@ function getCharity(userSubject) {
     const queryString = formatQueryParams(params);
     const url = charityApiUrl + "?" + queryString;
     console.log(`This is the url: ${url}`);
-    fetch(url)
+    fetch(url, {mode: 'cors'})
         .then(response => {
             if (response.ok) {
                 return response.json();
