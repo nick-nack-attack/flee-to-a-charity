@@ -1,9 +1,15 @@
 'use strict';
 
 function initializePage() {
+    console.log(` initializePage() is running ... `);
     $('#main-area').html(`
         <div class="card">
-            <p>Find the furthest away charity that is doing something you're passionate about. So you can abandon all the people in your life to go help some people.</p>
+        <h2>Having trouble with people around you?</h2>
+        <p>It's time to GET OUT OF CH(HERE)AIRITY!</p>
+        <p>Abandon all your responsibilites and everyone you love ... to go help people on the exact opposite side of the planet!</p>
+        <p>STEP 1: Enter in your data.</p>
+        <p>STEP 2: Find a charity to can abscond to on the other side of the world (with a the soonest flight to that location).</p>
+        <p>STEP 3: Leave immediately and don't tell anyone anything. Straight up ghost on folks.</p>
         </div>
     `)
 }
@@ -46,51 +52,53 @@ function getFarthestZipcode(responseJson) {
 }
 
 function getFarAwayZipcode(userZipcode) {
-    console.log(` getFarAwayZipcode() is running ... `);
-    const zipApi = 'js-8gx2Xw2m3hVqtsxYoFsC1xJyRjtPSmlMeTuiZSIfTtuYCx6mEKsf7r9TgMVqP9lP';
-    const farZipUrl = `https://www.zipcodeapi.com/rest/${zipApi}/radius.json/${userZipcode}/10000/km?minimal`;
-    return fetch(farZipUrl)
-    .then(response => {
-        if (response.ok) {
-            return response.json();
-        }
-        throw new Error(response.statusText);
-    })
-    .then(responseJson => getFarthestZipcode(responseJson))
-    .catch(error => {
-        $('#js-error-message').removeClass('hidden').text('Something went wrong: ' + error.message)
-    });
-    
+    return userZipcode;
+    /*
+       console.log(` getFarAwayZipcode() is running ... `);
+       const zipApi = 'js-8gx2Xw2m3hVqtsxYoFsC1xJyRjtPSmlMeTuiZSIfTtuYCx6mEKsf7r9TgMVqP9lP';
+       const farZipUrl = `https://www.zipcodeapi.com/rest/${zipApi}/radius.json/${userZipcode}/10000/km?minimal`;
+       return fetch(farZipUrl)
+       .then(response => {
+           if (response.ok) {
+               return response.json();
+           }
+           console.log(response.statusText);
+           throw new Error(response.statusText);
+       })
+       .then(responseJson => getFarthestZipcode(responseJson))
+       .catch(error => {
+           $('#js-error-message').removeClass('hidden').text('Something went wrong: ' + error.message)
+       });
+     */
 }
 
 function getCharity(userSubject, userZipcode) {
     console.log(` getCharity() is running ... `);
-    getFarAwayZipcode(userZipcode).then(newZipCode => { 
-        const charityID = '6bc077c3';
-        const charityApiKey = 'f847dcb76780f7b7babb31b6249cdfc3' // '42beb0038b32282e5146064515efe2db';
-        const charityApiUrl = 'https://api.data.charitynavigator.org/v2/Organizations' //'http://data.orghunter.com/v1/charitysearch';
-        const params = {
-            app_id: charityID,
-            app_key: charityApiKey,
-            search: userSubject,
-            pageSize: 1,
-            zip: newZipCode // getFarAwayZipcode(userZipcode),
-        }
-        const queryString = formatQueryParams(params);
-        const url = charityApiUrl + "?" + queryString;
-        const throughServerUrl = makeCorsLink(url) // `https://cors-anywhere.herokuapp.com/${url}`;
-        fetch(throughServerUrl)
-            .then(response => {
-                if (response.ok) {
-                    return response.json();
-                }
-                throw new Error(response.statusText);
-            })
-            .then(responseJson => displayResults(responseJson, userSubject))
-            .catch(error => {
-                $('#js-error-message').removeClass('hidden').text('Something went wrong: ' + error.message)
-            });
+    const charityID = '6bc077c3';
+    const charityApiKey = 'f847dcb76780f7b7babb31b6249cdfc3' // '42beb0038b32282e5146064515efe2db';
+    const charityApiUrl = 'https://api.data.charitynavigator.org/v2/Organizations' //'http://data.orghunter.com/v1/charitysearch';
+    const params = {
+        app_id: charityID,
+        app_key: charityApiKey,
+        search: userSubject,
+        pageSize: 1,
+        zip: userZipcode // getFarAwayZipcode(userZipcode),
+    }
+    const queryString = formatQueryParams(params);
+    const url = charityApiUrl + "?" + queryString;
+    const throughServerUrl = makeCorsLink(url) // `https://cors-anywhere.herokuapp.com/${url}`;
+    fetch(throughServerUrl)
+        .then(response => {
+            if (response.ok) {
+                return response.json();
+            }
+            throw new Error(response.statusText);
         })
+        .then(responseJson => displayResults(responseJson, userSubject))
+        .catch(error => {
+            $('#js-error-message').removeClass('hidden').text('Something went wrong: ' + error.message)
+        });
+
 }
 
 function watchForm() {
@@ -107,3 +115,5 @@ function runPage() {
     initializePage();
     watchForm();
 }
+
+runPage();
