@@ -37,7 +37,19 @@ input {
     display: none;
 }
 
+#antipodeImage {
+    height: 150px;
+}
+
+#watch-dog-image {
+    height: 150px;
+}
+
 /* CLASS CLASS CLASS */
+
+#map {
+    height: 100px;
+  }
 
 .card {
     border: 1px solid white;

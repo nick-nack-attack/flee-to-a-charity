@@ -14,8 +14,43 @@ function initializePage() {
     `)
 }
 
+function generateTopRatedCharities() {
+    return `
+    <div class="card">
+        <img id="watch-dog-image" src="images/charitywatch-logo.png">
+        <h2>Check out these Highly Rated Charities Instead</h2>
+        <p>Groups included on the CharityWatch Top-Rated list generally spend 75% or more of their budgets on programs, spend $25 or less to raise $100 in public support, do not hold excessive assets in reserve, have met CharityWatch's governance benchmarks, and receive "open-book" status for disclosure of basic financial information and documents to CharityWatch.</p>
+        <p><a class="link-button" href="https://www.charitywatch.org/top-rated-charities">Go to Charity Watch</a></p>
+        </div>
+    
+    `
+}
+
+function generateReactionCard() {
+    return `
+    <div class="card">
+        <h2>Whoops!</h2>
+        <p>Looks like side of the planet is ... the Pacific Ocean</p>
+        <img id="antipodeImage"src="images/antiPodesImages.png">
+        <p>In geography, the antipode of any spot on Earth is the point on Earth's surface diametrically opposite to it.</p>
+        <p>Approximately 15% of land territory is antipodal to other land, representing approximately 4.4% of the Earth's surface. So if you're going over there, I recommend bringing a snorkel!</p>
+        <p><a class="close-button">Mark as read</a></p>
+        <div id="map">${map}</div>
+        </div>
+    `
+}
+
+let map;
+function initMap() {
+  map = new google.maps.Map(document.getElementById('map'), {
+    center: {lat: -34.397, lng: 150.644},
+    zoom: 8
+  });
+}
+
 function displayResults(responseJson, userSubject) {
     console.log(` displayResults() is running ... `);
+    $('#main-inputs').empty();
     const theCharity = JSON.stringify(responseJson[0].charityName);
     const theirMission = JSON.stringify(responseJson[0].mission);
     const inCity = JSON.stringify(responseJson[0].mailingAddress.city);
@@ -24,9 +59,10 @@ function displayResults(responseJson, userSubject) {
     const ofClassification = JSON.stringify(responseJson[0].irsClassification.classification);
     const atUrl = JSON.stringify(responseJson[0].charityNavigatorURL);
     $('#main-area').empty();
-    $('#main-area').html(`
+    $('#main-area').append(generateReactionCard());
+    $('#main-area').append(`
         <div>
-        <p>Your ${userSubject} charity is ...</p>
+        <p>And I did find a ${userSubject} charity near you ...</p>
         <h2>${theCharity}</h2>
         <p>located in ${inCity}, ${inState}</p>
         <p>Category: ${ofCategory}</p>
@@ -34,6 +70,7 @@ function displayResults(responseJson, userSubject) {
         <p><a class="learn-more" href="${atUrl}" target="_blank">Learn more</a></p>
         </div>
     `)
+    $('#main-area').append(generateTopRatedCharities());
 }
 
 function formatQueryParams(params) {
@@ -114,6 +151,7 @@ function watchForm() {
 function runPage() {
     initializePage();
     watchForm();
+    initMap()
 }
 
 runPage();
