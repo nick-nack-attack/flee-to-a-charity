@@ -4,12 +4,15 @@ function initializePage() {
     console.log(` initializePage() is running ... `);
     $('#main-area').html(`
         <div class="card">
-        <h2>Having trouble with people around you?</h2>
-        <p>It's time to GET OUT OF CH(HERE)AIRITY!</p>
-        <p>Abandon all your responsibilites and everyone you love ... to go help people on the exact opposite side of the planet!</p>
-        <p>STEP 1: Enter in your data.</p>
-        <p>STEP 2: Find a charity to can abscond to on the other side of the world (with a the soonest flight to that location).</p>
-        <p>STEP 3: Leave immediately and don't tell anyone anything. Straight up ghost on folks.</p>
+        <h2>Abandon your responsibilites</h2>
+        <div id="sub-header">
+        <img id="plane-image" src="images/plane.png">
+        <p><i>... Adios to every<br>one you love !</i></p>
+        </div>
+        <p>Help people on the exact opposite of the planet.</p>
+        <p class="step-font">STEP 1</p><p>Enter your data below.</p>
+        <p class="step-font">STEP 2</p><p>Get matched to a charity on the other side of the planet.</p>
+        <p class="step-font">STEP 3</p><p>Leave immediately and, like, don't, tell anyone anything.</p>
         </div>
     `)
 }
@@ -30,12 +33,11 @@ function generateReactionCard() {
     return `
     <div class="card">
         <h2>Whoops!</h2>
-        <p>Looks like side of the planet is ... the Pacific Ocean</p>
+        <p>The other side of the planet is ... the Pacific Ocean</p>
         <img id="antipodeImage"src="images/antiPodesImages.png">
-        <p>In geography, the antipode of any spot on Earth is the point on Earth's surface diametrically opposite to it.</p>
-        <p>Approximately 15% of land territory is antipodal to other land, representing approximately 4.4% of the Earth's surface. So if you're going over there, I recommend bringing a snorkel!</p>
+        <p>The antipode, in geography, of any spot on Earth is the point on Earth's surface diametrically opposite to it.</p>
+        <p>Approximately 15% of land territory is antipodal to other land. So if you go straight down to the other side, 85% of places will put you at the bottom of the ocean.
         <p><a class="close-button">Mark as read</a></p>
-        <div id="map">${map}</div>
         </div>
     `
 }

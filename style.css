@@ -5,31 +5,56 @@
 /* ELEMENTS ELEMENTS ELEMENTS */
 
 body {
-    text-align: center;
-    background-color: black;
+    background-color: #00123B;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: 'Comfortaa', cursive;
     color: white;
-    margin-top: 50px;
-    padding-left: 40px;
-    padding-right: 40px;
+
+}
+
+input[name="submit"] {
+    margin-top: 30px;
+    margin-bottom: 200px;
+    background-color: #0043E0;
+    border: 1px #004BFA solid;
 }
 
 input {
     text-align: center;
+    border-radius: 10px;
+    border: 2px white solid;
+    color: white;
+    font-size: 20px;
+    background-color: transparent;
+    height: 50px;
+    width: 70%;
+    margin-top: 0;
+}
+
+h1 {
+    font-family: 'Righteous', cursive;
+    font-size: 23px;
+    text-align: center;
+    letter-spacing: 1px;
+    margin-top: 20px;
     margin-bottom: 20px;
-    margin-top: 10px;
+    color: #F2E205;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+h3 {
+    margin-top: 20px;
+    margin-bottom: 0px;
 }
 
 /* ID ID ID ID ID */
 
-#results-screen {
-    display: none;
-}
-
-#main-inputs {
-    position: fixed;
-    bottom: 20px;
-   left: 25%;
-   right: 25%;
+#antipodeImage {
+    height: 220px;
 }
 
 #js-error-message {
@@ -37,27 +62,59 @@ input {
     display: none;
 }
 
-#antipodeImage {
-    height: 150px;
+#map {
+    height: 100px;
+}
+
+#main-submit-form {
+    text-align: center;
+}
+
+#plane-image {
+    height: 75px;
+}
+
+#results-screen {
+    display: none;
+}
+
+#sub-header {
+    display: flex;
+    justify-content: space-around;
 }
 
 #watch-dog-image {
     height: 150px;
 }
 
+
+
 /* CLASS CLASS CLASS */
 
-#map {
-    height: 100px;
-  }
-
 .card {
-    border: 1px solid white;
-    border-radius: 5px;
-    padding: 20px;
+    border: 5px solid #0038BA;
+    border-radius: 10px;
+    background-color: #00257A;
+    padding-left: 30px;
+    padding-right: 30px;
+
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-a, a:visited, a:link {
+.step-font {
+    font-family: 'Righteous', cursive;
+    font-weight: bold;
+    letter-spacing: 2px;
+    color: yellow;
+}
+
+/* MISC MISC MISC MISC*/
+
+a,
+a:visited,
+a:link {
     color: white;
     border: white 1px solid;
     padding: 10px 20px;
@@ -71,3 +128,7 @@ a:hover {
     cursor: pointer;
 }
 
+input[name="submit"]:hover, input[name="submit"]:focus {
+    border: #004BFA 1px solid;
+    background-color: #00257A;
+}
