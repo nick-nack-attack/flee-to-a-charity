@@ -1,5 +1,6 @@
 'use strict';
 
+// Generates card explaining functionality of app
 function initializePage() {
     console.log(` initializePage() is running ... `);
     $('#main-area').html(`
@@ -17,6 +18,7 @@ function initializePage() {
     `)
 }
 
+// Card referring user to top rated charities
 function generateTopRatedCharities() {
     return `
         <div class="card result-card">
@@ -28,11 +30,12 @@ function generateTopRatedCharities() {
     `
 }
 
+// Card explaining antipodes and link to Wikipedia
 function generateReactionCard() {
     return `
     <div class="card result-card">
-        <h2>Whoops!</h2>
-            <p>The other side of the planet is ... the Pacific Ocean</p>
+        <h2>Results</h2>
+            <p>Whoops ... other side of the planet is ... the Pacific Ocean.</p>
             <img id="antipodeImage"src="images/antiPodesImages.png">
             <p>The antipode, in geography, of any spot on Earth is the point on Earth's surface diametrically opposite to it.</p>
             <p>If you dig a hole, in a straight line through the center of the Earth, you would come out on the other side in China, right? Wrong! </p>
@@ -46,6 +49,7 @@ function generateReactionCard() {
     `
 }
 
+// Display the charity that is returned from API
 function displayResults(responseJson, userSubject) {
     console.log(` displayResults() is running ... `);
     $('#main-inputs').empty();
@@ -59,7 +63,7 @@ function displayResults(responseJson, userSubject) {
     $('#main-area').empty();
     $('#main-area').append(generateReactionCard());
     $('#main-area').append(`
-        <div class="card">
+        <div class="card result-card">
             <p>And I did find a ${userSubject} charity near you ...</p>
             <h2>${theCharity}</h2>
                 <p>located in ${inCity}, ${inState}</p>
@@ -71,36 +75,33 @@ function displayResults(responseJson, userSubject) {
     $('#main-area').append(generateTopRatedCharities());
 }
 
+// Turns the charity api query keys and values into a string
 function formatQueryParams(params) {
     const queryItems = Object.keys(params).map(key => encodeURIComponent(key) + '=' + encodeURIComponent(params[key]))
     return queryItems.join('&')
 }
 
+// Makes a CORS link necessary for the charity API
 function makeCorsLink(formattedURL) {
     return `https://cors-anywhere.herokuapp.com/${formattedURL}`
 }
 
-function getFarthestZipcode(responseJson) {
-    console.log(` getFarthestZipcode() is running ... `);
-    console.log(`Here is furthest away zipCode: ${JSON.stringify(responseJson.responses[0].zip_codes[0])}`)
-    return JSON.stringify(responseJson.responses[0].zip_codes[0]);
-}
-
+// Use the user submitted subject and zipcode to return a charity from API
 function getCharity(userSubject, userZipcode) {
     console.log(` getCharity() is running ... `);
     const charityID = '6bc077c3';
-    const charityApiKey = '3622b5079d43947cb65b10dc6762ae41' // 'f847dcb76780f7b7babb31b6249cdfc3';
-    const charityApiUrl = 'https://api.data.charitynavigator.org/v2/Organizations' //'http://data.orghunter.com/v1/charitysearch';
+    const charityApiKey = '3622b5079d43947cb65b10dc6762ae41'
+    const charityApiUrl = 'https://api.data.charitynavigator.org/v2/Organizations'
     const params = {
         app_id: charityID,
         app_key: charityApiKey,
         search: userSubject,
         pageSize: 1,
-        zip: userZipcode // getFarAwayZipcode(userZipcode),
+        zip: userZipcode
     }
     const queryString = formatQueryParams(params);
     const url = charityApiUrl + "?" + queryString;
-    const throughServerUrl = makeCorsLink(url) // `https://cors-anywhere.herokuapp.com/${url}`;
+    const throughServerUrl = makeCorsLink(url)
     fetch(throughServerUrl)
         .then(response => {
             if (response.ok) {
@@ -115,6 +116,7 @@ function getCharity(userSubject, userZipcode) {
         });
 }
 
+// This looks with hawkeyes on the submit button
 function watchForm() {
     $('form').submit(event => {
         console.log(' watchForm() is running ... ');
@@ -125,9 +127,11 @@ function watchForm() {
     })
 }
 
+// This fires up the first card and the form
 function runPage() {
     initializePage();
     watchForm();
 }
 
+// This runs ... the page
 runPage();

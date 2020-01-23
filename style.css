@@ -29,6 +29,7 @@ input[name="submit"] {
     margin-bottom: 200px;
     background-color: #0043E0;
     border: 1px #004BFA solid;
+    cursor: pointer;
 }
 
 input {
@@ -68,6 +69,10 @@ h3 {
     height: 220px;
 }
 
+#back-button-div {
+    margin-top: 50px;
+}
+
 #js-error-message {
     color: red;
     display: none;
@@ -97,10 +102,9 @@ h3 {
 }
 
 #watch-dog-image {
+    margin-top: 30px;
     height: 150px;
 }
-
-
 
 /* CLASS CLASS CLASS */
 
@@ -163,13 +167,13 @@ input[name="submit"]:hover, input[name="submit"]:focus {
 }
 
 @media only screen and (min-width: 320px) {
-
+/* Optimized for mobile */
 }
 
 @media only screen and (min-width: 550px) {
-
+/* Optimized for mobile */
 }
 
 @media only screen and (min-width: 800px) {
-
+/* Optimized for mobile */
 }
