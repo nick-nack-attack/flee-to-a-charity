@@ -1,95 +1,65 @@
 # Flee to a Charity
 
-An app to help users find a charity on the opposite side of the planet. Why? To abandon all your responsibilities and loved ones to go help people you've never seen before, tha's why!
+Find a charity on the opposite side of the planet. Why? To abandon all your responsibilities and loved ones to help people you've never seen before in a place you've never been to, that's why!
 
 ## Motivation
 
 ![Untapped Potential](images/graph!.jpg)
 
-I thought about doing an app to find a charity near the user. But I'm sure that's been done. So the idea of finding the invers 
+I thought about doing an app to find a charity near the user. But I'm sure that's been done plenty of times. So the idea of finding the inverse solution became appealing as it seemed novel.
 
 ## Build Status
 
 [![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://nick-nack-attack.github.io/flee-to-a-charity)
 
-## Wireframes
-Login Screen/Landing Page:
+## Pre-Production
 
-![login screen](screenshots/login.png)
+User Flow:
+![User Flow](images/userFlow_01.jpg)
 
-About:
+The idea was to match a user with a charity on the other side of the world. There were plans to use a travel API to get the soonest flight to that location.
 
-![about](screenshots/about.png)
+Wireframes:
+![v1 Wireframes](images/v1_wireframes.png)
 
-Library:
+I was planning on adding a share button along with functionality to print results. 
 
-![library](screenshots/library.png)
+![v2 Wireframes](images/v2_wireframes.png)
 
-Recommendations:
+I decided to scale back MVP functionality to only return a charity.
 
-![recommendations](screenshots/recommendations.png)
+Final design:
+![Final Design](images/final_flee.png)
 
-## Environment Setup
+It became clear in research that there are no charities on the direct opposite side of the planet. Because for everyone in the United States, that's the pacific ocean. So finding the nearest philinthropic endeavor in the vast stretches of floating plastic seemed futile. Thus I pivoted to explaining antipodes and informing the user that China isn't under our feet in reality.
 
-1. Setup your own postgress server
-2. Run the database_script.sql file to build your table structure
-3. Create a .env file in your server folder which contains the path to your database as well as your client id and secret
-4. Obtain a client id and secret by setting up your app with [the google developers console](https://console.developers.google.com/)
-5. Run your project with
-```
-npm run dev
-```
-
-## Running the tests
-
-To run all tests, run
-```
-npm test
-```
-To run just the front/back end tests, run
-```
-npm run test:server
-
-npm run test:client
-```
+I also included a link to the top-rated charities. I decided to move on to the next project instead of sinking more time into this little eye-candy. I hope it leaves users wanting more. Or infuriated. Either one is fine. 
 
 ## Built With
 
-### Front-End
-* React
-* Redux
-* React-Router
-
-### Back-End
-* Postgress
-* Express
-* Node
-* Knex
-
-### Testing
-* Mocha
-* Chai
-* Chai-http
-* Jest
+* HTML
+* CSS
+* Javascript
+* jQuery
+* Love <3
 
 ## Features
 
-* Create a list of books
-* Add your favorite books
-* Like lists to get recommendations
-* See every book currently in the library
+* Search for a charity based on interest and location
+* Learn about antipodes
+* Redirect to Top-rated charaties
 
 ## Demo
 
-- [Live Demo](https://book-thing.herokuapp.com/)
+- [Live Demo](https://nick-nack-attack.github.io/flee-to-a-charity/)
 
 ## Authors
 
-* **Sonja Duric** - ** - Database design/Back-End development
-* **Jonathan Fitzgibbon** - ** - Back-End development/testing
-* **Tanner Gill** - ** - Front-End development/testing, styling
-* **Patrice White** - ** - Front-End development/testing, styling
+* **Nick** - ** - Literally everything
 
 ## Acknowledgments
 
-* **Ben Pardo** - ** - The Great Savior, The Wise Sage
+**Info** https://www.antipodesmap.com/
+**API** https://www.charitynavigator.org/
+**Graphics** http://flaticon.com
+
