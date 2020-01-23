@@ -6,7 +6,7 @@ Find a charity on the opposite side of the planet. Why? To abandon all your resp
 
 ![Untapped Potential](images/graph!.jpg)
 
-I thought about doing an app to find a charity near the user. But I'm sure that's been done plenty of times. So the idea of finding the inverse solution became appealing as it seemed novel.
+I thought about doing an app to find a charity near the user. But I'm sure that's been done plenty of times. So the idea of finding the inverse solution became appealing as it seemed novel and stupid but charming. Sums me up quite nicely, I think.
 
 ## Build Status
 
