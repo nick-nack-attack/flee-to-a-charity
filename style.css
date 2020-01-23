@@ -13,8 +13,19 @@ body {
 
 }
 
+footer {
+    text-align: center;
+    color: white;
+    margin: auto 40px;
+    font-size: 14px;
+}
+
+form {
+    width: 300px;
+}
+
 input[name="submit"] {
-    margin-top: 30px;
+    margin-top: 40px;
     margin-bottom: 200px;
     background-color: #0043E0;
     border: 1px #004BFA solid;
@@ -68,6 +79,8 @@ h3 {
 
 #main-submit-form {
     text-align: center;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 #plane-image {
@@ -97,10 +110,26 @@ h3 {
     background-color: #00257A;
     padding-left: 30px;
     padding-right: 30px;
-
     width: 300px;
     margin-left: auto;
     margin-right: auto;
+}
+
+.image-caption {
+    font-size: 12px;
+}
+
+.learn-more {
+    margin: 50px auto;
+    text-align: center;
+}
+
+.map-image {
+    width: 200px;
+}
+
+.result-card {
+    margin-bottom: 50px;
 }
 
 .step-font {
@@ -131,4 +160,16 @@ a:hover {
 input[name="submit"]:hover, input[name="submit"]:focus {
     border: #004BFA 1px solid;
     background-color: #00257A;
+}
+
+@media only screen and (min-width: 320px) {
+
+}
+
+@media only screen and (min-width: 550px) {
+
+}
+
+@media only screen and (min-width: 800px) {
+
 }
