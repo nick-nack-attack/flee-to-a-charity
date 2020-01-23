@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-# getMeOutOfCH-HERE-ARITY
-
-The name of your app at the top of the file
-
-A link to your live app
-
-Screenshot(s) of your app. This makes your app description much easier to understand.
-
-A summary section. This should have a concise explanation of what your app does. Try to frame this from the standpoint of what the user does, or what the app enables for the user.
-
-A section on the technology used. For your capstone, this is fairly simple (HTML/CSS/JavaScript/jQuery) but it's still good to list out the key technologies.
-=======
 <!-- # book-thing.io
 
 Initial wireframes:
@@ -18,7 +5,8 @@ Initial wireframes:
 https://wireframe.cc/x0a8I9
 
 https://wireframe.cc/6oVXTU -->
-# Book-Thing.IO
+
+# Flee to a Charity
 
 A community driven, book recommendation application. Users can create lists of their favorite books and have others recommended to them.
 
@@ -111,4 +99,3 @@ npm run test:client
 ## Acknowledgments
 
 * **Ben Pardo** - ** - The Great Savior, The Wise Sage
->>>>>>> 0dfa36900e13d193bb3fc04906cbeae8bdb4af59
