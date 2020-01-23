@@ -1,18 +1,12 @@
-<!-- # book-thing.io
-
-Initial wireframes:
-
-https://wireframe.cc/x0a8I9
-
-https://wireframe.cc/6oVXTU -->
-
 # Flee to a Charity
 
-A community driven, book recommendation application. Users can create lists of their favorite books and have others recommended to them.
+An API to find a charity on the opposite side of the planet to abandon all your loved ones and responsibilities ... but do something nice at the same time. 
 
 ## Motivation
 
-We wanted a book recommendation app that was community driven. Books and lists are all created by the users.
+![Untapped Potential](images/graph!.jpg)
+
+I thought about doing an app to find a charity near the user. But I'm sure that's been done. So the idea of finding the invers 
 
 ## Build Status
 
