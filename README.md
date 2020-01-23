@@ -62,9 +62,12 @@ I used Adobe to find a royal blue color palette.
 
 ## Authors
 
-* **Nick** - ** - Literally everything
+* **Nick** - Literally everything
 
 ## Acknowledgments
 
-(**Research**) https://www.antipodesmap.com/ (**API**) https://www.charitynavigator.org/ (**Graphics**) http://flaticon.com (**Color**) https://color.adobe.com/create
+* **Research** https://www.antipodesmap.com/
+* **API** https://www.charitynavigator.org/
+* **Graphics** http://flaticon.com
+* **Color** https://color.adobe.com/create
 
