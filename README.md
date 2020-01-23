@@ -1,6 +1,6 @@
 # Flee to a Charity
 
-An API to find a charity on the opposite side of the planet to abandon all your loved ones and responsibilities ... but do something nice at the same time. 
+An app to help users find a charity on the opposite side of the planet. Why? To abandon all your responsibilities and loved ones to go help people you've never seen before, tha's why!
 
 ## Motivation
 
@@ -10,9 +10,9 @@ I thought about doing an app to find a charity near the user. But I'm sure that'
 
 ## Build Status
 
-![Build Status](https://travis-ci.org/thinkful-c11/book-thing.io.svg?branch=master)
+[![Build Status](https://travis-ci.org/travis-ci/travis-web.svg?branch=master)](https://nick-nack-attack.github.io/flee-to-a-charity)
 
-## Screenshots
+## Wireframes
 Login Screen/Landing Page:
 
 ![login screen](screenshots/login.png)
