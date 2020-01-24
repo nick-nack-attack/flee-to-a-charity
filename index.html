@@ -27,16 +27,22 @@
 
         <section>
             <div id="main-inputs">
-            <form id="main-submit-form">
-                <label for="subject-you-search-for"><h3>Cause you are<br>passionate about</h3></label><br>
-                <input name="subject-you-search-for" id="subject-you-search-for" type="text" placeholder="ex. cancer" required><br>
-                <label for="city-you-live-in"><h3>Your zipcode</h3></label><br>
-                <input name="zipcode-you-live-in" id="zipcode-you-live-in" type="text" placeholder="ex. 55305" pattern="[0-9]{5}" title="Five (5) digit zip code" required><br>
-                <input name="submit" type="submit" value="submit">
+                <form id="main-submit-form">
+                    <label for="subject-you-search-for">
+                        <h3>Cause you are<br>passionate about</h3>
+                    </label><br>
+                    <input name="subject-you-search-for" id="subject-you-search-for" type="text"
+                        placeholder="ex. cancer" required><br>
+                    <label for="city-you-live-in">
+                        <h3>Your zipcode</h3>
+                    </label><br>
+                    <input name="zipcode-you-live-in" id="zipcode-you-live-in" type="text" placeholder="ex. 55305"
+                        pattern="[0-9]{5}" title="Five (5) digit zip code" required><br>
+                    <input name="submit" type="submit" value="submit">
                     <div id="js-error-message">
                         <p>Something went wrong!</p>
                     </div>
-            </div>  
+            </div>
             </form>
         </section>
     </main>
