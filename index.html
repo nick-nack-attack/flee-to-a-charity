@@ -18,23 +18,20 @@
     <header>
         <h1>Flee <i class="fas fa-running"></i> to a CHARITY</h1>
     </header>
+    <div id="main-area"></div>
 
     <main>
 
         <section>
-            <div id="main-area"></div>
-        </section>
-
-        <section>
             <div id="main-inputs">
                 <form id="main-submit-form">
-                    <label for="subject-you-search-for">
-                        <h3>Cause you are<br>passionate about</h3>
+                    <label id="cause-label" for="subject-you-search-for">
+                        Cause you are<br>passionate about
                     </label><br>
                     <input name="subject-you-search-for" id="subject-you-search-for" type="text"
                         placeholder="ex. cancer" required><br>
-                    <label for="city-you-live-in">
-                        <h3>Your zipcode</h3>
+                    <label id="zipcode-label" for="zipcode-you-live-in">
+                        Your zipcode
                     </label><br>
                     <input name="zipcode-you-live-in" id="zipcode-you-live-in" type="text" placeholder="ex. 55305"
                         pattern="[0-9]{5}" title="Five (5) digit zip code" required><br>
@@ -42,13 +39,12 @@
                     <div id="js-error-message">
                         <p>Something went wrong!</p>
                     </div>
-            </div>
-            </form>
+                </form>
         </section>
     </main>
 
     <footer>
-        <p>Made by nick-nack-attack<br>in the year of our Lord Twenty Twenty</p>
+        <h4>Made by nick-nack-attack<br>in the year of our Lord Twenty Twenty</h4>
     </footer>
 
     <section>

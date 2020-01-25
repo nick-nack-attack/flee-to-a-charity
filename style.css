@@ -25,7 +25,6 @@ form {
 }
 
 input[name="submit"] {
-    margin-top: 40px;
     margin-bottom: 200px;
     background-color: #0043E0;
     border: 1px #004BFA solid;
@@ -41,7 +40,8 @@ input {
     background-color: transparent;
     height: 50px;
     width: 70%;
-    margin-top: 0;
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 h1 {
@@ -58,9 +58,8 @@ h2 {
     font-size: 20px;
 }
 
-h3 {
-    margin-top: 20px;
-    margin-bottom: 0px;
+label {
+    font-size: 20px;
 }
 
 /* ID ID ID ID ID */
@@ -117,6 +116,7 @@ h3 {
     width: 300px;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 50px;
 }
 
 .image-caption {
@@ -130,10 +130,6 @@ h3 {
 
 .map-image {
     width: 200px;
-}
-
-.result-card {
-    margin-bottom: 50px;
 }
 
 .step-font {

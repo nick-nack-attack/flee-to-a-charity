@@ -2,12 +2,11 @@
 
 // Generates card explaining functionality of app
 function initializePage() {
-    console.log(` initializePage() is running ... `);
     $('#main-area').html(`
         <div class="card">
             <h2>Abandon your responsibilites</h2>
                 <div id="sub-header">
-                    <img id="plane-image" src="images/plane.png">
+                    <img id="plane-image" src="images/plane.png" alt="white plane with blue wings">
                     <p><i>... Adios to every<br>one you love !</i></p>
                 </div>
             <p>Help people on the exact opposite of the planet.</p>
@@ -22,7 +21,7 @@ function initializePage() {
 function generateTopRatedCharities() {
     return `
         <div class="card result-card">
-            <img id="watch-dog-image" src="images/charitywatch-logo.png">
+            <img id="watch-dog-image" src="images/charitywatch-logo.png" alt="charity watch logo">
             <h2>Check out these Highly Rated Charities Instead</h2>
                 <p>Groups included on the CharityWatch Top-Rated list generally spend 75% or more of their budgets on programs, spend $25 or less to raise $100 in public support, do not hold excessive assets in reserve, have met CharityWatch's governance benchmarks, and receive "open-book" status for disclosure of basic financial information and documents to CharityWatch.</p>
                 <div class="learn-more"><p><a class="link-button" href="https://www.charitywatch.org/top-rated-charities" target="_blank">Go to Charity Watch</a></p></div>
@@ -36,7 +35,7 @@ function generateReactionCard() {
     <div class="card result-card">
         <h2>Results</h2>
             <p>Whoops ... other side of the planet is ... the Pacific Ocean.</p>
-            <img id="antipodeImage"src="images/antiPodesImages.png">
+            <img id="antipodeImage"src="images/antiPodesImages.png" alt="images of earth antipodes">
             <p>The antipode, in geography, of any spot on Earth is the point on Earth's surface diametrically opposite to it.</p>
             <p>If you dig a hole, in a straight line through the center of the Earth, you would come out on the other side in China, right? Wrong! </p>
             <p>You'll end up in the ocean!</p>
@@ -51,7 +50,6 @@ function generateReactionCard() {
 
 // Display the charity that is returned from API
 function displayResults(responseJson, userSubject) {
-    console.log(` displayResults() is running ... `);
     $('#main-inputs').empty();
     const theCharity = JSON.stringify(responseJson[0].charityName);
     const theirMission = JSON.stringify(responseJson[0].mission);
@@ -88,7 +86,6 @@ function makeCorsLink(formattedURL) {
 
 // Use the user submitted subject and zipcode to return a charity from API
 function getCharity(userSubject, userZipcode) {
-    console.log(` getCharity() is running ... `);
     const charityID = '6bc077c3';
     const charityApiKey = '3622b5079d43947cb65b10dc6762ae41'
     const charityApiUrl = 'https://api.data.charitynavigator.org/v2/Organizations'
@@ -119,7 +116,6 @@ function getCharity(userSubject, userZipcode) {
 // This looks with hawkeyes on the submit button
 function watchForm() {
     $('form').submit(event => {
-        console.log(' watchForm() is running ... ');
         event.preventDefault();
         const userSubject = $('#subject-you-search-for').val();
         const userZipcode = $('#zipcode-you-live-in').val();
